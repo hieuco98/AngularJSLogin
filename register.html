@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <style>
+        .register-form {
+            width: 300px;
+            margin: 0 auto;
+            font-family: Tahoma, Geneva, sans-serif;
+            background-color: gray;
+        }
+
+        .register-form input[type="password"],
+        .register-form input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid red;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        .register-form input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background-color: blue;
+            border: 0;
+            box-sizing: border-box;
+            cursor: pointer;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .register-form p {
+            text-align: center;
+            color: #4d4d4d;
+            font-size: 24px;
+            padding: 20px 0 20px 0;
+        }
+        .register-form button {
+            width: 100%;
+            padding: 15px;
+            background-color: blue;
+            border: 0;
+            box-sizing: border-box;
+            cursor: pointer;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+    </style></head>
+    <body style="background-color: gray;">
+        <div class="register-form">
+            <p> <strong> Register Page </strong></p>
+            <form  ng-submit="vm.register()" >
+                <div>
+                    <input type="text" name="firstname" id="firstname" ng-model="vm.user.firstname" placeholder="FirstName">
+                </div> 
+                <div>
+                    <input type="text" name="lastname" id="lastname" ng-model="vm.user.lastname" placeholder="LastName">
+                </div>
+                <div >
+                    <input type="text" name="username" id="username" ng-model="vm.user.username" placeholder="UserName">
+                </div>
+                <div>
+                    <input type="password" name="password" id="password" ng-model="vm.user.password" placeholder="Password">
+                </div>
+                <div>
+                    <input type="number" name="pincode" id="pincode" ng-model ="vm.user.pincode" placeholder="PINCODE">
+                </div>
+                <div>
+                <button type="submit"  > Register </button>
+                <a href="#!/">Cancel</a>
+            </div></form></div></body></html>
